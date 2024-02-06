@@ -27,3 +27,14 @@ const images = [
     alt: 'Zebras on Zebra',
   },
 ];
+
+
+const gallery = document.querySelector('ul.gallery');
+
+images.forEach(element => {
+  const imagelist = document.createElement("li");
+  imagelist.innerHTML = `<img url ="${element.url}" alt ="${element.alt}">`
+  
+
+  gallery.append(imagelist);
+})
